@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/splitwise.tellsiddh.github.io/static/css/main.c95302ef.css",
-    "main.js": "/splitwise.tellsiddh.github.io/static/js/main.d4f54bdd.js",
+    "main.js": "/splitwise.tellsiddh.github.io/static/js/main.f029fb4c.js",
     "static/js/239.f1f22a5b.chunk.js": "/splitwise.tellsiddh.github.io/static/js/239.f1f22a5b.chunk.js",
     "static/js/977.1696df54.chunk.js": "/splitwise.tellsiddh.github.io/static/js/977.1696df54.chunk.js",
     "static/js/455.3173bc4a.chunk.js": "/splitwise.tellsiddh.github.io/static/js/455.3173bc4a.chunk.js",
     "static/js/453.16d07e48.chunk.js": "/splitwise.tellsiddh.github.io/static/js/453.16d07e48.chunk.js",
     "index.html": "/splitwise.tellsiddh.github.io/index.html",
     "main.c95302ef.css.map": "/splitwise.tellsiddh.github.io/static/css/main.c95302ef.css.map",
-    "main.d4f54bdd.js.map": "/splitwise.tellsiddh.github.io/static/js/main.d4f54bdd.js.map",
+    "main.f029fb4c.js.map": "/splitwise.tellsiddh.github.io/static/js/main.f029fb4c.js.map",
     "239.f1f22a5b.chunk.js.map": "/splitwise.tellsiddh.github.io/static/js/239.f1f22a5b.chunk.js.map",
     "977.1696df54.chunk.js.map": "/splitwise.tellsiddh.github.io/static/js/977.1696df54.chunk.js.map",
     "455.3173bc4a.chunk.js.map": "/splitwise.tellsiddh.github.io/static/js/455.3173bc4a.chunk.js.map",
@@ -16,6 +16,6 @@
   },
   "entrypoints": [
     "static/css/main.c95302ef.css",
-    "static/js/main.d4f54bdd.js"
+    "static/js/main.f029fb4c.js"
   ]
 }
