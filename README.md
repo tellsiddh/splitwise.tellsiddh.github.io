@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Splitwise Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A complete, feature-rich Splitwise clone built with React, TypeScript, and Tailwind CSS. This is a frontend-only application that uses local storage for data persistence.
 
 ## Available Scripts
 
