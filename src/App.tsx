@@ -30,7 +30,7 @@ const AppContent: React.FC = () => {
 
   return (
     <AppProvider>
-      <Router>
+  <Router>
         <Routes>
           <Route path="/" element={<DashboardPage />} />
           <Route path="/expenses" element={<ExpensesPage />} />
