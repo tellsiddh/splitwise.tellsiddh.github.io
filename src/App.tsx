@@ -30,7 +30,7 @@ const AppContent: React.FC = () => {
 
   return (
     <AppProvider>
-      <Router basename="/splitwise.tellsiddh.github.io">
+      <Router>
         <Routes>
           <Route path="/" element={<DashboardPage />} />
           <Route path="/expenses" element={<ExpensesPage />} />
