@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
 import Layout from '../components/layout/Layout';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
@@ -11,12 +11,12 @@ import { Activity, ActivityType } from '../types';
 
 const ActivityPage: React.FC = () => {
   const { user } = useAuth();
-  const { expenses, groups, friends, loading } = useApp();
+  const { expenses, groups, loading } = useApp();
   const [filter, setFilter] = useState<'all' | 'expenses' | 'groups' | 'friends'>('all');
 
   // Get all users for display
   const allUsers = storageService.getUsers();
-  const getUserById = (id: string) => allUsers.find(u => u.id === id);
+  const getUserById = useCallback((id: string) => allUsers.find(u => u.id === id), [allUsers]);
 
   // Generate activities from current data
   const activities = useMemo(() => {

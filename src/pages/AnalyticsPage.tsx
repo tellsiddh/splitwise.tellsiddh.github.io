@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
 import Layout from '../components/layout/Layout';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
@@ -14,7 +14,7 @@ const AnalyticsPage: React.FC = () => {
 
   // Get all users for display
   const allUsers = storageService.getUsers();
-  const getUserById = (id: string) => allUsers.find(u => u.id === id);
+  const getUserById = useCallback((id: string) => allUsers.find(u => u.id === id), [allUsers]);
 
   // Filter expenses by time range
   const getTimeRangeStart = () => {

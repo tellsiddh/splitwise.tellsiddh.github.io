@@ -12,15 +12,11 @@ import { storageService } from '../services/storage';
 
 const ExpensesPage: React.FC = () => {
   const { user } = useAuth();
-  const { expenses, loading, deleteExpense } = useApp();
+  const { expenses, loading } = useApp();
   const [filter, setFilter] = useState<'all' | 'personal' | 'group' | 'you-owe' | 'owed-to-you'>('all');
   const [showExportModal, setShowExportModal] = useState(false);
 
-  const handleDeleteExpense = (expenseId: string, expenseDescription: string) => {
-    if (window.confirm(`Are you sure you want to delete "${expenseDescription}"? This action cannot be undone.`)) {
-      deleteExpense(expenseId);
-    }
-  };
+
 
   // Get all users for display
   const allUsers = storageService.getUsers();

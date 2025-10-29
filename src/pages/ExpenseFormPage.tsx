@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useSearchParams, useParams } from 'react-router-dom';
 import Layout from '../components/layout/Layout';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/Card';
@@ -26,7 +26,7 @@ const ExpenseFormPage: React.FC = () => {
   const preSelectedGroup = searchParams.get('group');
   
   // Initialize form data based on whether we're editing or creating
-  const getInitialFormData = () => {
+  const getInitialFormData = useCallback(() => {
     if (isEditing && existingExpense) {
       return {
         description: existingExpense.description,
@@ -49,7 +49,7 @@ const ExpenseFormPage: React.FC = () => {
       notes: '',
       date: new Date().toISOString().split('T')[0],
     };
-  };
+  }, [isEditing, existingExpense, user?.id, preSelectedGroup]);
 
   const [formData, setFormData] = useState(getInitialFormData());
   const [selectedUsers, setSelectedUsers] = useState<string[]>([]);
@@ -77,7 +77,7 @@ const ExpenseFormPage: React.FC = () => {
         setCustomSplits(customSplitData);
       }
     }
-  }, [isEditing, existingExpense]);
+  }, [isEditing, existingExpense, getInitialFormData]);
 
   const categories: { value: ExpenseCategory; label: string; emoji: string }[] = [
     { value: 'food', label: 'Food & Dining', emoji: '🍽️' },
