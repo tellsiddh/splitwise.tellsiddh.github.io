@@ -2,7 +2,7 @@
   "name": "splitwise",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://tellsiddh.github.io/splitwise.tellsiddh.github.io",
+  "homepage": "https://splitwise.tellsiddh.com",
   "dependencies": {
     "@headlessui/react": "^2.2.9",
     "@heroicons/react": "^2.2.0",
